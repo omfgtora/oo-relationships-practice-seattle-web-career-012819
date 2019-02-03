@@ -1,30 +1,29 @@
-require_relative '../config/environment.rb'
+require_relative "../config/environment.rb"
 
 def reload
-  load 'config/environment.rb'
+  load "config/environment.rb"
 end
 
 #
-# airbnb tests
+# airbnb Tests
 #
 
 # Listings
-mcmelon_mansion = Listing.new('McMelon Mansion', 'Los Angeles')
-two_mansion = Listing.new('Two Mansion', 'San Francisco')
-lagges_house = Listing.new('Lagges House', 'Seattle')
-one_house = Listing.new('One House', 'Dallas')
-two_house = Listing.new('Two House', 'San Francisco')
-blue_apartment = Listing.new('Blue Apartment', 'New York')
-koszarek_condo = Listing.new('Koszarek Condo', 'New Orleans')
+mcmelon_mansion = Listing.new("McMelon Mansion", "Los Angeles")
+two_mansion = Listing.new("Two Mansion", "San Francisco")
+lagges_house = Listing.new("Lagges House", "Seattle")
+one_house = Listing.new("One House", "Dallas")
+two_house = Listing.new("Two House", "San Francisco")
+blue_apartment = Listing.new("Blue Apartment", "New York")
+koszarek_condo = Listing.new("Koszarek Condo", "New Orleans")
 
 # Guests
-steve = Guest.new('Steve Jobs')
-al = Guest.new('Al Yankovic')
-paul = Guest.new('Paul Atreides')
-duncan = Guest.new('Duncan Idaho')
-brawne = Guest.new('Brawne Lamia')
-buchemi = Guest.new('Steve Buchemi')
-
+steve = Guest.new("Steve Jobs")
+al = Guest.new("Al Yankovic")
+paul = Guest.new("Paul Atreides")
+duncan = Guest.new("Duncan Idaho")
+brawne = Guest.new("Brawne Lamia")
+buchemi = Guest.new("Steve Buchemi")
 
 # Trips
 steve.add_trip(mcmelon_mansion)
@@ -35,7 +34,7 @@ al.add_trip(koszarek_condo)
 paul.add_trip(mcmelon_mansion)
 paul.add_trip(two_house)
 # duncan.add_trip(koszarek_condo)
-brawne .add_trip(blue_apartment)
+brawne.add_trip(blue_apartment)
 
 # Tests
 all_listings = Listing.all
@@ -47,7 +46,7 @@ puts "\n"
 most_popular = Listing.most_popular
 if most_popular.length > 1
   puts "The most popular listings have #{most_popular[0].trip_count} trips total:"
-  most_popular.each {|each| puts "    #{each.name}"}
+  most_popular.each { |each| puts "    #{each.name}" }
 else
   puts "Most Popular Listing is the #{most_popular.name} with #{most_popular.trip_count} trips."
 end
@@ -56,6 +55,16 @@ Guest.all
 Guest.pro_traveler
 Guest.find_all_by_name("Steve Jobs")
 
-# 
+#
+# IMDB Tests
+#
+
+# We want to use SNL as an example for a show that has many actors
+# that have also been in movies.
+
+bill_murray = Actor.new("Bill Murray")
+andie_macdowell =
+  groundhog_day = Movie.new("Groundhog Day")
+groundhog_day.add_character("Phil Connors", "Bill Murray")
 
 # Pry.start
