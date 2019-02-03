@@ -63,8 +63,8 @@ Guest.find_all_by_name("Steve Jobs")
 # that have also been in movies.
 
 bill_murray = Actor.new("Bill Murray")
-andie_macdowell =
-  groundhog_day = Movie.new("Groundhog Day")
+andie_macdowell = Actor.new("Andie MacDowell")
+groundhog_day = Movie.new("Groundhog Day")
 groundhog_day.add_character("Phil Connors", "Bill Murray")
 
 # Pry.start

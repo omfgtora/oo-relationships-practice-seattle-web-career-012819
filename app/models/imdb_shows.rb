@@ -1,8 +1,8 @@
 class Show
-  @@all = []
-
   attr_reader :name
   attr_accessor :characters
+
+  @@all = []
 
   def initialize(name)
     @name = name

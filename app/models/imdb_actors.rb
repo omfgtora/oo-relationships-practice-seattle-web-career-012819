@@ -1,7 +1,8 @@
 class Actor
-  @@all = []
   attr_reader :name
   attr_accessor :characters, :movies, :shows
+
+  @@all = []
 
   def initialize(name)
     @name = name
